@@ -29,6 +29,15 @@ Apple Silicon.
 The full step-by-step tutorial, troubleshooting, and uninstall instructions
 are in the [README](https://github.com/kurtzonaudio/kurtcord-macos#step-by-step-tutorial).
 
+## Compatibility
+
+- Native **arm64** build for every Apple Silicon Mac, including **M5, M5 Pro,
+  and M5 Max**.
+- Verified on **macOS 26.6.2 (Tahoe) arm64**: the DMG mounts, the app is
+  Mach-O arm64, the bundle is `com.kurtcord.desktop` version 2.8.3, and
+  `codesign --verify --deep --strict` passes.
+- Requires macOS 11 (Big Sur) or newer. Use the x64 DMG only on Intel Macs.
+
 ## What is included
 
 - Equicord, the Kurtcord userscript, voice/audio panel, RNNoise and

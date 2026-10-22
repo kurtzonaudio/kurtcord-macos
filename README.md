@@ -59,7 +59,7 @@ is not published here. Windows releases are in the separate
 
 | Your Mac | Download |
 | --- | --- |
-| Apple Silicon — M1, M2, M3, M4, or newer | `Kurtcord-2.8.3-mac-arm64.dmg` |
+| Apple Silicon — M1, M2, M3, M4, M5, or newer | `Kurtcord-2.8.3-mac-arm64.dmg` |
 | Intel — Core i5, i7, i9, Xeon | `Kurtcord-2.8.3-mac-x64.dmg` |
 
 To check:
@@ -74,6 +74,22 @@ If you are not sure, download the **arm64** DMG. If your Mac has an Apple
 M-series chip, that is the right build. The x64 build also runs on Apple
 Silicon through Rosetta, but the arm64 build is faster and is the recommended
 one.
+
+### Apple Silicon and macOS 26
+
+The `arm64` DMG is a native build for every Apple Silicon Mac, including
+**M5, M5 Pro, and M5 Max**. It was verified on macOS 26.6.2 (Tahoe) arm64:
+the DMG mounts, the app is Mach-O arm64, the bundle identity is
+`com.kurtcord.desktop` version 2.8.3, and the code signature validates with
+`codesign --verify --deep --strict`.
+
+M5 Macs use the same arm64 architecture and macOS 26, so the arm64 DMG is the
+correct build. Use the x64 DMG only on Intel Macs.
+
+The GUI launch itself was not run on the headless CI runner (macOS runners
+cannot open a normal app window), so the final click-through should be done
+on the Mac. The bundle, architecture, OS compatibility, and signature are
+confirmed.
 
 ---
 
