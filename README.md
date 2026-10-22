@@ -43,8 +43,8 @@ repository.
   the menu-bar tray, config sync, and plugins.
 - A native macOS application menu and menu-bar icon.
 - Proper macOS Microphone, Camera, and Screen Recording permission handling.
-- A universal install experience: open the DMG, drag Kurtcord to Applications,
-  and launch it.
+- A standard Mac install experience: open the DMG, drag Kurtcord to
+  Applications, and launch it.
 - Apple Silicon and Intel builds.
 
 **Requires macOS 11 (Big Sur) or newer.**
@@ -70,10 +70,10 @@ To check:
    - **Apple M1 / M2 / M3 / M4** → use the **arm64** DMG.
    - **Intel Core** → use the **x64** DMG.
 
-If you are not sure, download the **arm64** DMG. Every Mac sold since late
-2020 is Apple Silicon, and macOS will tell you if you picked the wrong build.
-The x64 build also runs on Apple Silicon through Rosetta, but the arm64 build
-is faster and is the recommended one.
+If you are not sure, download the **arm64** DMG. If your Mac has an Apple
+M-series chip, that is the right build. The x64 build also runs on Apple
+Silicon through Rosetta, but the arm64 build is faster and is the recommended
+one.
 
 ---
 
@@ -267,6 +267,7 @@ To also remove settings, caches, and login data:
 
 ```bash
 rm -rf ~/Library/Application\ Support/Kurtcord
+rm -rf ~/Library/Caches/Kurtcord
 rm -rf ~/Library/Caches/com.kurtcord.desktop
 ```
 
