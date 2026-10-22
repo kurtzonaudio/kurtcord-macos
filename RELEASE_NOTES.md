@@ -48,6 +48,30 @@ are in the [README](https://github.com/kurtzonaudio/kurtcord-macos#step-by-step-
 - Apple Silicon and Intel builds.
 - Requires macOS 11 (Big Sur) or newer.
 
+## Having trouble launching?
+
+On an M-series Mac, make sure you downloaded the **arm64** DMG. macOS 27 does
+not automatically restore Rosetta, so the x64 DMG may not launch on Apple
+Silicon.
+
+Repair tool:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kurtzonaudio/kurtcord-macos/main/Repair-Kurtcord.command -o ~/Downloads/Repair-Kurtcord.command
+chmod +x ~/Downloads/Repair-Kurtcord.command
+~/Downloads/Repair-Kurtcord.command
+```
+
+If it still will not launch, collect a diagnostic report and send it:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kurtzonaudio/kurtcord-macos/main/Diagnose-Kurtcord.command -o ~/Downloads/Diagnose-Kurtcord.command
+chmod +x ~/Downloads/Diagnose-Kurtcord.command
+~/Downloads/Diagnose-Kurtcord.command
+```
+
+The report is saved to `~/Desktop/Kurtcord-Diagnose.txt`.
+
 ## Signing
 
 The apps are ad-hoc signed and were verified with

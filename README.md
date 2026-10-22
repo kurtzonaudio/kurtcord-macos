@@ -316,6 +316,38 @@ If it still fails, delete the app, re-download the DMG, and verify the
 SHA-256 checksum. Also make sure you downloaded the right architecture:
 arm64 for Apple Silicon, x64 for Intel.
 
+### “Kurtcord cannot be opened” on macOS 27, or nothing happens
+
+First check the architecture. On an M-series Mac (including M5), use the
+**arm64** DMG. macOS 27 does not automatically restore Rosetta, so the x64
+DMG may not launch on Apple Silicon.
+
+Then run the repair tool. Open **Terminal** and paste:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kurtzonaudio/kurtcord-macos/main/Repair-Kurtcord.command -o ~/Downloads/Repair-Kurtcord.command
+chmod +x ~/Downloads/Repair-Kurtcord.command
+~/Downloads/Repair-Kurtcord.command
+```
+
+It copies Kurtcord to Applications, clears the download quarantine flag,
+re-signs the app for your Mac, verifies it, and opens it.
+
+If it still does not launch, run the diagnostic tool:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kurtzonaudio/kurtcord-macos/main/Diagnose-Kurtcord.command -o ~/Downloads/Diagnose-Kurtcord.command
+chmod +x ~/Downloads/Diagnose-Kurtcord.command
+~/Downloads/Diagnose-Kurtcord.command
+```
+
+The report is saved to `~/Desktop/Kurtcord-Diagnose.txt`. It shows the exact
+Gatekeeper, signature, architecture, and crash reason. Send that file for
+review.
+
+These tools do not disable Gatekeeper or SIP. They only clear the quarantine
+flag and re-sign the app locally.
+
 ### The DMG will not open
 
 1. Right-click the `.dmg` and choose **Open**.
