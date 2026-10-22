@@ -348,6 +348,15 @@ review.
 These tools do not disable Gatekeeper or SIP. They only clear the quarantine
 flag and re-sign the app locally.
 
+If the repair tool still does not help, try the **Electron 45 test build** for
+macOS 27:
+
+https://github.com/kurtzonaudio/kurtcord-macos/releases/tag/v2.8.3-macos27
+
+It contains the same Kurtcord 2.8.3 payload with a newer Electron runtime. Use
+the arm64 DMG, run the repair tool on it, and approve it in System Settings if
+macOS asks.
+
 ### The DMG will not open
 
 1. Right-click the `.dmg` and choose **Open**.

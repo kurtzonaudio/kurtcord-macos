@@ -72,6 +72,11 @@ chmod +x ~/Downloads/Diagnose-Kurtcord.command
 
 The report is saved to `~/Desktop/Kurtcord-Diagnose.txt`.
 
+If the repair tool still does not help, try the Electron 45 test build for
+macOS 27:
+
+https://github.com/kurtzonaudio/kurtcord-macos/releases/tag/v2.8.3-macos27
+
 ## Signing
 
 The apps are ad-hoc signed and were verified with
