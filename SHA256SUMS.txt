@@ -1,0 +1,2 @@
+cee338dac8c5f6844ed44a5a9b3eb7acc794b829cce7a08d19b4cab90fe04d80  Kurtcord-2.8.3-mac-arm64.dmg
+f8012894271fe2c579745f05e22b5a7bb4f4bdf966ca4aba70a36a70f8032dbf  Kurtcord-2.8.3-mac-x64.dmg
