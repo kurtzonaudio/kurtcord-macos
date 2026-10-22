@@ -351,9 +351,15 @@ flag and re-sign the app locally.
 ### The DMG will not open
 
 1. Right-click the `.dmg` and choose **Open**.
-2. If that fails, open **System Settings → Privacy & Security** and click
-   **Open Anyway**.
-3. Re-download the file and check it against `SHA256SUMS.txt`.
+2. If that fails, clear its quarantine flag and open it again:
+
+   ```bash
+   xattr -cr ~/Downloads/Kurtcord-2.8.3-mac-arm64.dmg
+   open ~/Downloads/Kurtcord-2.8.3-mac-arm64.dmg
+   ```
+
+3. If it still fails, re-download the file and check it against
+   `SHA256SUMS.txt`.
 
 ### No microphone or camera
 
